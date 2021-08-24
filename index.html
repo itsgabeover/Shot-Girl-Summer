@@ -2,13 +2,35 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title></title>
+    <title>Shot Girl Summer</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <script src="./src/index.js"></script>
     <link rel="stylesheet" href="./assets/style.css" />
     <link href="" rel="stylesheet" />
   </head>
   <body>
+    <div class="logo">
+        <h1>Shot Girl Summer</h1>
+      </div>
+      <div>
+          <form id="Search Bar">
+          <input type="text" placeholder="Enter Song/Artist" id="songs" name="song" />
+          <input type="submit" value="search" />
+        </form>
+      </div>
+      <div>
+      <table class='margin' border="1">
+        <thead class='blue'>
+          <tr class='padding'>
+            <th class='padding center'>Song</th>
+            <th class='padding center'>Artist</th>
+            <th class='padding center'>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+    </div>
    
   </body>
 </html>
