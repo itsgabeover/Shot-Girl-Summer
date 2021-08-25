@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <title>Shot Girl Summer</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <script src="./index.js"></script>
+    <script defer src="./index.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <link href="" rel="stylesheet" />
   </head>
@@ -13,30 +13,94 @@
         <h1>Shot Girl Summer</h1>
       </div>
       <div>
-          <form id="Search Bar">
+         <form id="Search Bar">
           <input type="text" placeholder="Enter Song/Artist" id="songs" name="song" />
-          <input type="submit" value="search" />
+          <input type="submit" value="Search" />
         </form>
-      </div>
+        <div>
+          <form id="create-playlist">
+            <input type="text" placeholder="Name Your Playlist" id="playlist" name="song" />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+        <div>
+          <p> </p>
+        </div>
       <div>
       <table class='margin' border="3">
         <thead class='blue'>
           <tr class='padding'>
             <th class='padding center'>Song</th>
             <th class='padding center'>Artist</th>
-            <th class='padding center'>Delete</th>
-
+            <th class='padding center'>Add To Playlist</th>
           </tr>
-
         </thead>
         <tbody id="table-body">
-          <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        </tbody>
+      </table>
+      <div><p></p></div>
+      <table>
+        <th id = 'playlist-name'>Playlist Name: </th>
+      </table>
+      <table class='margin' border="3">
+        <thead class='blue'>
+          <tr class='padding'>
+            <th class='padding center'>#</th>
+            <th class='padding center'>Song</th>
+            <th class='padding center'>Artist</th>
           </tr>
-          <tr>
-            
+        </thead>
+        <tbody id="table-body">
+            <tr>
+              <td>1.</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>3.</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>4.</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>5.</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>6.</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>7.</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>8.</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>9.</td>
+              <td> </td>
+              <td> </td>
+            </tr>
+            <tr>
+              <td>10.</td>
+              <td> </td>
+              <td> </td>
+            </tr>
         </tbody>
       </table>
     </div>

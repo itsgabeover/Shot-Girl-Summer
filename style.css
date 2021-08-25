@@ -8,10 +8,8 @@
   }
 
 
-  #table-body td {
-    margin: 100px;
-    width: 15%;
-    text: white
-    padding: 15px
-
+  table, th, td {
+    border: 1px solid black;
+    height: 20px;
+    margin-left: 10px
   }
