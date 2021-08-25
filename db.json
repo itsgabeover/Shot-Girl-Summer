@@ -1,0 +1,14 @@
+{"songs":
+    [
+      {
+      "id": 1,
+      "songName": "Hot Girl Summer",
+      "artist": "Megan Thee Stallion",
+      },
+      {
+        "id": 1,
+        "songName": "Life is Good (feat. Drake)",
+        "artist": "Future",
+      }
+    ],
+  }
