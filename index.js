@@ -1,3 +1,5 @@
+let counter = 1;
+
 fetch('http://localhost:3000/songs')
      .then(res => res.json())
      .then(songObjects => {
@@ -25,8 +27,30 @@ function renderSongList(song){
 
     addToPlaylist.addEventListener('click', (e) => {
         e.preventDefault()
-        const bodyPlaylist = document.querySelector('#playlist-body tr')
-        bodyPlaylist.innerText = song.name
+        console.log(document.querySelector('#one').innerText)
+        if (document.querySelector('#one').innerText === "") {
+        const songLocation = document.querySelector('#one')
+        const artistLocation = document.querySelector('#oneArtist')
+        songLocation.innerText = song.name
+        artistLocation.innerText = song.artist
+         } else if (document.querySelector('#two').innerText === "") {
+        const songLocation = document.querySelector('#two')
+        const artistLocation = document.querySelector('#twoArtist')
+        songLocation.innerText = song.name
+        artistLocation.innerText = song.artist
+        }
+        else if (document.querySelector('#three').innerText === "") {
+            const songLocation = document.querySelector('#three')
+            const artistLocation = document.querySelector('#threeArtist')
+            songLocation.innerText = song.name
+            artistLocation.innerText = song.artist
+            }
+        else if (document.querySelector('#four').innerText === "") {
+            const songLocation = document.querySelector('#four')
+            const artistLocation = document.querySelector('#fourArtist')
+            songLocation.innerText = song.name
+            artistLocation.innerText = song.artist
+            }          
       })
   
 
@@ -42,7 +66,6 @@ playlistForm.addEventListener('submit', e => {
     e.preventDefault()
     const playlistName = document.querySelector('#playlist-name')
     const userInput = e.target['playlist'].value
-    console.log(userInput)
 
     playlistName.textContent = `Playlist Name: ${userInput}`
 
