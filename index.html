@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <title>Shot Girl Summer</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
-    <script src="./src/index.js"></script>
-    <link rel="stylesheet" href="./assets/style.css" />
+    <script defer src="./index.js"></script>
+    <link rel="stylesheet" href="./style.css" />
     <link href="" rel="stylesheet" />
   </head>
   <body>
@@ -13,21 +13,94 @@
         <h1>Shot Girl Summer</h1>
       </div>
       <div>
-          <form id="Search Bar">
+         <form id="Search Bar">
           <input type="text" placeholder="Enter Song/Artist" id="songs" name="song" />
-          <input type="submit" value="search" />
+          <input type="submit" value="Search" />
         </form>
-      </div>
+        <div>
+          <form id="create-playlist">
+            <input type="text" placeholder="Name Your Playlist" id="playlist" name="song" />
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+        <div>
+          <p> </p>
+        </div>
       <div>
-      <table class='margin' border="1">
+      <table class='margin' border="3">
         <thead class='blue'>
           <tr class='padding'>
             <th class='padding center'>Song</th>
             <th class='padding center'>Artist</th>
-            <th class='padding center'>Delete</th>
+            <th class='padding center'>Add To Playlist</th>
           </tr>
         </thead>
         <tbody id="table-body">
+        </tbody>
+      </table>
+      <div><p></p></div>
+      <table>
+        <th id = 'playlist-name'>Playlist Name: </th>
+      </table>
+      <table class='margin' border="3">
+        <thead class='blue'>
+          <tr class='padding'>
+            <th class='padding center'>#</th>
+            <th class='padding center'>Song</th>
+            <th class='padding center'>Artist</th>
+          </tr>
+        </thead>
+        <tbody id="playlist-body">
+            <tr>
+              <td >1.</td>
+              <td id = 'one'> </td>
+              <td id ='oneArtist'> </td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td id = 'two'> </td>
+              <td id = 'twoArtist'> </td>
+            </tr>
+            <tr>
+              <td>3.</td>
+              <td id = 'three'> </td>
+              <td id = 'threeArtist'> </td>
+            </tr>
+            <tr>
+              <td>4.</td>
+              <td id = 'four'> </td>
+              <td id = 'fourArtist'> </td>
+            </tr>
+            <tr>
+              <td>5.</td>
+              <td id = 'five'> </td>
+              <td id = 'fiveArtist'> </td>
+            </tr>
+            <tr>
+              <td>6.</td>
+              <td id = 'six'> </td>
+              <td id = 'sixArtist'> </td>
+            </tr>
+            <tr>
+              <td>7.</td>
+              <td id = 'seven'> </td>
+              <td id = 'sevenArtist'> </td>
+            </tr>
+            <tr>
+              <td>8.</td>
+              <td id = 'eight'> </td>
+              <td id = 'eightArtist'> </td>
+            </tr>
+            <tr>
+              <td>9.</td>
+              <td id = 'nine'> </td>
+              <td id = 'nineArtist'> </td>
+            </tr>
+            <tr>
+              <td>10.</td>
+              <td id = 'ten'> </td>
+              <td id = 'tenArtist'> </td>
+            </tr>
         </tbody>
       </table>
     </div>
