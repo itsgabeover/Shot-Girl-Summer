@@ -5,6 +5,7 @@ fetch('http://localhost:3000/songs')
            renderSongList(song)
          })
         })
+
 function renderSongList(song){
     const songTable = document.getElementById('table-body')
     const row = document.createElement('tr')
@@ -21,7 +22,14 @@ function renderSongList(song){
     const addToPlaylist = document.createElement('button')
     addToPlaylist.innerText = "ADD"
     row.append(addToPlaylist)
-    
+
+    addToPlaylist.addEventListener('click', (e) => {
+        e.preventDefault()
+        const bodyPlaylist = document.querySelector('#playlist-body tr')
+        bodyPlaylist.innerText = song.name
+      })
+  
+
 }
 
 function createPlaylistTable() {
