@@ -50,7 +50,43 @@ function renderSongList(song){
             const artistLocation = document.querySelector('#fourArtist')
             songLocation.innerText = song.name
             artistLocation.innerText = song.artist
-            }          
+            }  
+            else if (document.querySelector('#five').innerText === "") {
+              const songLocation = document.querySelector('#five')
+              const artistLocation = document.querySelector('#fiveArtist')
+              songLocation.innerText = song.name
+              artistLocation.innerText = song.artist
+              }
+              else if (document.querySelector('#six').innerText === "") {
+                const songLocation = document.querySelector('#six')
+                const artistLocation = document.querySelector('#sixArtist')
+                songLocation.innerText = song.name
+                artistLocation.innerText = song.artist
+                }
+                else if (document.querySelector('#seven').innerText === "") {
+                  const songLocation = document.querySelector('#seven')
+                  const artistLocation = document.querySelector('#sevenArtist')
+                  songLocation.innerText = song.name
+                  artistLocation.innerText = song.artist
+                  } 
+                  else if (document.querySelector('#eight').innerText === "") {
+                    const songLocation = document.querySelector('#eight')
+                    const artistLocation = document.querySelector('#eightArtist')
+                    songLocation.innerText = song.name
+                    artistLocation.innerText = song.artist
+                    }
+                    else if (document.querySelector('#nine').innerText === "") {
+                      const songLocation = document.querySelector('#nine')
+                      const artistLocation = document.querySelector('#nineArtist')
+                      songLocation.innerText = song.name
+                      artistLocation.innerText = song.artist
+                      } 
+                      else if (document.querySelector('#ten').innerText === "") {
+                        const songLocation = document.querySelector('#ten')
+                        const artistLocation = document.querySelector('#tenArtist')
+                        songLocation.innerText = song.name
+                        artistLocation.innerText = song.artist
+                        }            
       })
   
 

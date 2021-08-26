@@ -9,6 +9,46 @@
         "id": 2,
         "name": "Life is Good (feat. Drake)",
         "artist": "Future"
+      },
+      {
+        "id": 3,
+        "name": "Bad Girls",
+        "artist": "M.I.A."
+      },
+      {
+        "id": 4,
+        "name": "My Type",
+        "artist": "Saweetie"
+      },
+      {
+        "id": 5,
+        "name": "Life is Good (feat. Drake)",
+        "artist": "Future"
+      },
+      {
+        "id": 6,
+        "name": "Life is Good (feat. Drake)",
+        "artist": "Future"
+      },
+      {
+        "id": 7,
+        "name": "Life is Good (feat. Drake)",
+        "artist": "Future"
+      },
+      {
+        "id": 8,
+        "name": "Life is Good (feat. Drake)",
+        "artist": "Future"
+      },
+      {
+        "id": 9,
+        "name": "Life is Good (feat. Drake)",
+        "artist": "Future"
+      },
+      {
+        "id": 10,
+        "name": "Life is Good (feat. Drake)",
+        "artist": "Future"
       }
     ]
   }
