@@ -13,3 +13,48 @@
     height: 20px;
     margin-left: 10px
   }
+
+
+  h1 {
+    padding: 60px;
+    text-align: center;
+    background: #1abc9c;
+    color: blue;
+    font-size: 30px;
+  }
+
+  #table-body
+  {
+    padding: 60px;
+    text-align: center;
+    background: rgb(80, 200, 255);
+    text: white
+    font-size: 30px;
+  }
+
+  #playlist-name
+  {
+    
+    padding: 35px;
+    text-align: center;
+  }
+
+  .column {
+    float: left;
+    width: 50%;
+    padding: 5px;
+  }
+  
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+  }
