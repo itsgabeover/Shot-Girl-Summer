@@ -8,21 +8,21 @@ fetch('http://localhost:3000/songs')
    })
 
 function renderSongList(song){
-const songTable = document.getElementById('table-body')
-const row = document.createElement('tr')
-songTable.append(row)
+    const songTable = document.getElementById('table-body')
+    const row = document.createElement('tr')
+    songTable.append(row)
 
-const songName = document.createElement('td')
-songName.innerText = song.name
-row.append(songName)
+    const songName = document.createElement('td')
+    songName.innerText = song.name
+    row.append(songName)
 
-const artistName = document.createElement('td')
-artistName.innerText = song.artist
-row.append(artistName)
+    const artistName = document.createElement('td')
+    artistName.innerText = song.artist
+    row.append(artistName)
 
-const addToPlaylist = document.createElement('button')
-addToPlaylist.innerText = "ADD"
-row.append(addToPlaylist)
+    const addToPlaylist = document.createElement('button')
+    addToPlaylist.innerText = "ADD"
+    row.append(addToPlaylist)
 
 addToPlaylist.addEventListener('click', (e) => {
    e.preventDefault()
@@ -88,57 +88,49 @@ addToPlaylist.addEventListener('click', (e) => {
                    }            
  })
 
-
 }
 
-function createPlaylistTable() {
-
-}
-
+//Event Listeners
+document.querySelector('#add-song').addEventListener('submit', handleAddSong)
 const playlistForm = document.getElementById('create-playlist')
+playlistForm.addEventListener('submit', handlePlaylist)
 
-playlistForm.addEventListener('submit', e => {
-e.preventDefault()
-const playlistName = document.querySelector('#playlist-name')
-const userInput = e.target['playlist'].value
+//Event Handlers
+function handleAddSong(e) {
+    e.preventDefault()
+    let songObj = {
+        name: e.target['add-song'].value,
+        artist: e.target['add-artist'].value
+    }
+    addSong(songObj)
+    console.log(songObj)
+}
 
-playlistName.textContent = `Playlist Name: ${userInput}`
+function addSong(songObj){
+    console.log(JSON.stringify(songObj))
+    fetch('http://localhost:3000/songs',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify(songObj)
+    })
+    .then(res => res.json())
+    .then(song => renderSongList(song))
+}
+function handlePlaylist(e){
+    e.preventDefault()
+    const playlistName = document.querySelector('#playlist-name')
+    const userInput = e.target['playlist'].value
 
-})
-
-
-
-//         const dogForm = document.getElementById(‘dog-form’)
-//         data.forEach( (dog) => {
-//             const table = document.getElementById(‘table-body’)
-//             const row = document.createElement(‘tr’)
-//             table.append(row)
-//             const dogNames = document.createElement(‘td’)
-//             dogNames.innerText = dog.name
-//             row.append(dogNames)
-//             const dogBreed = document.createElement(‘td’)
-//             dogBreed.innerText = dog.breed
-//             row.append(dogBreed)
-//             const dogSex = document.createElement(‘td’)
-//             dogSex.innerText = dog.sex
-//             row.append(dogSex)
-//             const dogButton = document.createElement(‘button’)
-//             dogButton.innerText = ‘Edit Dog’
-//             row.append(dogButton)
-//             dogButton.addEventListener(‘click’, (e) => {
-//                 e.preventDefault()
-//                 console.log(dogForm.name, dog.name)
-//                 dogForm.name.value = dog.name
-//                 dogForm.breed.value = dog.breed
-//                 dogForm.sex.value = dog.sex
-
+    playlistName.textContent = `Playlist Name: ${userInput}`
+}
 function deleteSongFromPlayList(){ 
-//
-let li = document.createElement('li')
-let button = document.createElement('button')
-button.addEventListener('click', handleDelete)
-button.textContent = 'Delete'
-// li.textContent = `${} `;
-li.appendChild(button);
-document.querySelector('#tasks').appendChild(li);
+    let li = document.createElement('li')
+    let button = document.createElement('button')
+    button.addEventListener('click', handleDelete)
+    button.textContent = 'Delete'
+    // li.textContent = `${} `;
+    li.appendChild(button);
+    document.querySelector('#tasks').appendChild(li);
 }
